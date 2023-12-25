@@ -30,7 +30,8 @@
     ```elixir
     config :ueberauth, Ueberauth.Strategy.PagerDuty.OAuth,
       client_id: System.get_env("PAGERDUTY_CLIENT_ID"),
-      client_secret: System.get_env("PAGERDUTY_CLIENT_SECRET")
+      client_secret: System.get_env("PAGERDUTY_CLIENT_SECRET"),
+      redirect_uri: System.get_env("PAGERDUTY_REDIRECT_URI")
     ```
 
     Or, to read the client credentials at runtime:
@@ -38,7 +39,8 @@
     ```elixir
     config :ueberauth, Ueberauth.Strategy.PagerDuty.OAuth,
       client_id: {:system, "PAGERDUTY_CLIENT_ID"},
-      client_secret: {:system, "PAGERDUTY_CLIENT_SECRET"}
+      client_secret: {:system, "PAGERDUTY_CLIENT_SECRET"},
+      redirect_uri: {:system, "PAGERDUTY_REDIRECT_URI"}
     ```
 
 5.  Include the Überauth plug in your router:
