@@ -87,8 +87,11 @@ defmodule Ueberauth.Strategy.PagerDuty.OAuth do
 
   def get_token(client, params, headers) do
     client
-    |> put_param("client_secret", client.client_secret)
-    |> put_header("Accept", "application/json")
+    |> put_param(:code, params[:code])
+    |> put_param(:grant_type, "authorization_code")
+    |> put_param(:client_id, client.client_id)
+    |> put_param(:client_secret, client.client_secret)
+    |> put_param(:redirect_uri, client.redirect_uri)
     |> OAuth2.Strategy.AuthCode.get_token(params, headers)
   end
 
