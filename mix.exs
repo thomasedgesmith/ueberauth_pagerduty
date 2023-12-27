@@ -48,7 +48,7 @@ defmodule Ueberauth.PagerDuty.Mixfile do
   defp package do
     [
       description: "An Ueberauth strategy for using PagerDuty to authenticate your users.",
-      files: ["lib", "mix.exs", "README.md", "LICENSE"],
+      files: ["lib", "mix.exs", "README.md", "LICENSE.md"],
       maintainers: ["Thomas Edgesmith"],
       licenses: ["MIT"],
       links: %{
