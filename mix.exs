@@ -20,7 +20,7 @@ defmodule Ueberauth.PagerDuty.Mixfile do
 
   def application do
     [
-      applications: [:logger, :ueberauth, :oauth2]
+      extra_applications: [:logger]
     ]
   end
 
@@ -29,22 +29,19 @@ defmodule Ueberauth.PagerDuty.Mixfile do
       {:oauth2, "~> 2.1"},
       {:ueberauth, "== 0.10.5"},
       {:credo, "~> 0.8", only: [:dev, :test], runtime: false},
-      {:ex_doc, ">= 0.0.0", only: :dev, runtime: false}
+      {:ex_doc, "~> 0.31", only: :dev, runtime: false}
     ]
   end
 
   defp docs do
     [
-      extras: [
-        "CHANGELOG.md": [title: "Changelog"],
-        "CONTRIBUTING.md": [title: "Contributing"],
-        LICENSE: [title: "License"],
-        "README.md": [title: "Overview"]
-      ],
+      source_ref: "v#{@version}",
       main: "readme",
-      source_url: @source_url,
-      source_ref: "#v{@version}",
-      formatters: ["html"]
+      extras: [
+        "README.md",
+        "CHANGELOG.md",
+        "LICENSE.md"
+      ]
     ]
   end
 
