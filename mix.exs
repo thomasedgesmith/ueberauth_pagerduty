@@ -27,7 +27,7 @@ defmodule Ueberauth.PagerDuty.Mixfile do
   defp deps do
     [
       {:oauth2, "~> 2.1"},
-      {:ueberauth, "== 0.10.5"},
+      {:ueberauth, "~> 0.10"},
       {:credo, "~> 0.8", only: [:dev, :test], runtime: false},
       {:ex_doc, "~> 0.31", only: :dev, runtime: false}
     ]
