@@ -11,7 +11,7 @@
     ```elixir
     def deps do
       [
-        {:ueberauth_pagerduty, "~> 0.1"}
+        {:ueberauth_pagerduty, "~> 0.1.1"}
       ]
     end
     ```
